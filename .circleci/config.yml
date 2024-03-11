@@ -1,0 +1,19 @@
+version: 2.1
+
+jobs:
+  echo_branch:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run:
+          name: print branch
+          command: echo "we are on branch -> ${CIRCLE_BRANCH}"
+      - run:
+          name: print commit
+          command: echo "this is for commit -> ${CIRCLE_SHA1}"
+
+workflows:
+  on_commit:
+    jobs:
+      - echo_branch
