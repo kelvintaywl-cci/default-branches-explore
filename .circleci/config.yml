@@ -7,7 +7,7 @@ jobs:
     resource_class: small
     steps:
       # simulate a long-running job; we want to see auto-cancel in action if any
-      - run: sleep 300
+      - run: sleep 60
       - run:
           name: print branch
           command: echo "we are on branch -> ${CIRCLE_BRANCH}"
