@@ -20,4 +20,4 @@ $ curl -s -X GET \
 ]
 ```
 
-NOTE: this will be from my-3rd-pr (not a default branch)
+NOTE: this will be from edge50 (default branch)
