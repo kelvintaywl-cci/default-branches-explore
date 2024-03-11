@@ -21,4 +21,3 @@ $ curl -s -X GET \
 ```
 
 NOTE: this will be from my-3rd-pr (not a default branch)
-
