@@ -20,4 +20,4 @@ $ curl -s -X GET \
 ]
 ```
 
-NOTE: this will be a PR from my-first-pr (not a default branch) onto edge100 (default branch)
+NOTE: this will be from edge25 (another default branch)
