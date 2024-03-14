@@ -14,8 +14,18 @@ jobs:
       - run:
           name: print commit
           command: echo "this is for commit -> ${CIRCLE_SHA1}"
+  will_fail:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run: sleep 5
+      - run: echo "fail on purpose" && exit 1
 
 workflows:
   on_commit:
     jobs:
       - echo_branch
+      - will_fail:
+          requires:
+            - echo_branch
